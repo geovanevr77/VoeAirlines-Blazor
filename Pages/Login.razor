@@ -1,0 +1,77 @@
+@page "/Login"
+
+<h1>Página de Login</h1>
+
+
+<div class="container">
+   
+
+
+    <div class="row">
+
+        <div class="col-6">
+
+          
+                <div class="mb-3 row">
+                    
+                    <input class="form-control" placeholder="Entre com o email">
+                 
+                </div>
+                <div class="mb-3 row">
+
+                   
+                        <input type="password" class="form-control" placeholder="Entre com a senha" id="inputPassword">
+                   
+                </div>
+                <div class="mb-3 row">                  
+                        <button type="button" class="btn btn-outline-dark form-control" @onclick="MostrarFuncMes">Acessar</button>
+                </div>
+
+           
+
+        </div>
+
+        <div class="col-5">
+            <div class="card" style="width: 15rem;">
+                <img src="../Imagens/pilotos-de-aviao.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Aniversariante do mês:</p>
+                    <p>@msg</p>
+                   
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+
+<!--Programação C# - Nesse caso substituindo o JavaScript ou ReactDOM-->
+
+@code{
+    
+    private string? msg;
+
+    private string? titulo;
+    public string? NomeCompleto { get; set; } = "Manoel Ferreira";
+    public string? Cargo { get; set; } = "Piloto";
+
+    private DateTime DataNas{ get; set; } = new DateTime(2020, 11, 18, 22, 59, 59);
+
+    public void MostrarFuncMes(){
+
+    var diaAtual = DateTime.Now.Day;
+    var mesAtual = DateTime.Now.Month;
+    titulo = "Aniversariante do Mês";
+
+    if (DataNas .Equals(diaAtual) && DataNas.Month.Equals(mesAtual)){
+         msg = $"Parabéns!!! {Cargo} {NomeCompleto} Hoje {DataNas.Day}/{DataNas.Month} é um dia especial.";
+    }
+    else { msg = "Não temos aniversariantes hoje.";}
+    }
+}
