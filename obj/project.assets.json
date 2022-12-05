@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\GEOVANE\\Desktop\\VoeAirlinesBlazor\\VoeAirlinesBlazor.csproj",
+      "projectUniqueName": "C:\\Users\\GEOVANE\\Desktop\\VoeAirlinesBlazor\\VoeAirlines-Blazor\\VoeAirlinesBlazor.csproj",
       "projectName": "VoeAirlinesBlazor",
-      "projectPath": "C:\\Users\\GEOVANE\\Desktop\\VoeAirlinesBlazor\\VoeAirlinesBlazor.csproj",
+      "projectPath": "C:\\Users\\GEOVANE\\Desktop\\VoeAirlinesBlazor\\VoeAirlines-Blazor\\VoeAirlinesBlazor.csproj",
       "packagesPath": "C:\\Users\\GEOVANE\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\GEOVANE\\Desktop\\VoeAirlinesBlazor\\obj\\",
+      "outputPath": "C:\\Users\\GEOVANE\\Desktop\\VoeAirlinesBlazor\\VoeAirlines-Blazor\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\GEOVANE\\AppData\\Roaming\\NuGet\\NuGet.Config",

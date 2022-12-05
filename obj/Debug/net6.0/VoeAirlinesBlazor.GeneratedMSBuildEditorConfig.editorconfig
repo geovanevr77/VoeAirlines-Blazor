@@ -8,61 +8,73 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = VoeAirlinesBlazor
 build_property.RootNamespace = VoeAirlinesBlazor
-build_property.ProjectDir = C:\Users\GEOVANE\Desktop\VoeAirlinesBlazor\
+build_property.ProjectDir = c:\Users\GEOVANE\Desktop\VoeAirlinesBlazor\VoeAirlines-Blazor\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\GEOVANE\Desktop\VoeAirlinesBlazor
+build_property.MSBuildProjectDirectory = c:\Users\GEOVANE\Desktop\VoeAirlinesBlazor\VoeAirlines-Blazor
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/App.razor]
+[c:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/VoeAirlines-Blazor/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/Pages/Aeronave.razor]
+[c:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/VoeAirlines-Blazor/Pages/AdicionarUsuario.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRpY2lvbmFyVXN1YXJpby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/VoeAirlines-Blazor/Pages/Aeronave.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWVyb25hdmUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/Pages/Counter.razor]
+[c:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/VoeAirlines-Blazor/Pages/Autentica.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0ZW50aWNhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/VoeAirlines-Blazor/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/Pages/FetchData.razor]
+[c:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/VoeAirlines-Blazor/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/Pages/Index.razor]
+[c:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/VoeAirlines-Blazor/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/Pages/Login.razor]
+[c:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/VoeAirlines-Blazor/Pages/ListarUsuario.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGFyVXN1YXJpby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/VoeAirlines-Blazor/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/Shared/SurveyPrompt.razor]
+[c:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/VoeAirlines-Blazor/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/_Imports.razor]
+[c:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/VoeAirlines-Blazor/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/Shared/MainLayout.razor]
+[c:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/VoeAirlines-Blazor/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-z0ldbwyuqu
 
-[C:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/Shared/NavMenu.razor]
+[c:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/VoeAirlines-Blazor/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-q0y8wszpc5
 
-[C:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/Pages/Error.cshtml]
+[c:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/VoeAirlines-Blazor/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/Pages/_Host.cshtml]
+[c:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/VoeAirlines-Blazor/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/Pages/_Layout.cshtml]
+[c:/Users/GEOVANE/Desktop/VoeAirlinesBlazor/VoeAirlines-Blazor/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

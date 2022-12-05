@@ -13,7 +13,7 @@ main[b-z0ldbwyuqu] {
 }
 
 .top-row[b-z0ldbwyuqu] {
-    background-color: #f8f7f7;
+    background-color: #d61f65;
     border-bottom: 1px solid #d6d5d5;
     justify-content: flex-end;
     height: 3.5rem;
@@ -28,7 +28,7 @@ main[b-z0ldbwyuqu] {
     border-radius: 15px;
 }
 .tow-row a:hover[b-z0ldbwyuqu]{
-    color:#3e3cc2;
+    color:#1a17b9;
     padding: 1%;
     border-radius: 15px;
     color: black;

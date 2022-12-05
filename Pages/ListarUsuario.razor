@@ -1,0 +1,56 @@
+@page "/listarusuarios"
+@using Data
+@using Newtonsoft.Json
+@inject HttpClient client
+<div class="container-fluid">
+    <div class="row justify-content-center" style="margin-bottom:50px">
+        <h3 class="text-center">Chamando Lista</h3>
+    </div>
+</div>
+
+
+
+
+<div class="col-5">
+  @if (Users != null)
+  {
+    <table class="table">
+      
+        <thead>
+            <tr>
+                <th scope="col">Usuário</th>
+                <th scope="col">Data de Criação</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Users)
+            {
+                <tr>
+                  <td>@user.Usuario</td>
+                  <td>@user.DataCriacao</td>
+                </tr>                
+            }
+           
+        </tbody>
+    </table>
+  }
+</div>
+<div class="row" style="margin:10px;margin-bottom:50px;">
+<div class="col"><button type="button" @onclick="GetUser" class="btn btn-link" >Listar Usuários</button></div>
+</div>
+@code{    
+    List<Login>? Users;
+    private async void GetUser(){
+        var apiName = "http://geovanevr77-001-site1.ftempurl.com/api/login"; // endpoint.
+        var httpResponse = await client.GetAsync(apiName);
+        if(httpResponse.IsSuccessStatusCode){ 
+            Users = new List<Login>();      
+            var apiConteudo = await httpResponse.Content.ReadAsStringAsync();
+            //famosa Desserialização
+            Users = JsonConvert.DeserializeObject<List<Login>>(apiConteudo);
+            StateHasChanged();
+        }
+
+    }
+
+}
