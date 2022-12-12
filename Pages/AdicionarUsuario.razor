@@ -1,10 +1,108 @@
-@page "/adicionarusuario"
+@page "/AdicionarUsuario"
+@inject HttpClient client;
+@using Newtonsoft.Json;
+@inject IJSRuntime JsRuntime;
 
-<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+
+<div class="col-3">
+
+    Usuário:<input type="text" class="form-control" id="inputUser" @bind-value="@adduser.Usuario" placeholder="">
 </div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+<div class="col-3">
+
+    Senha:<input type="password" class="form-control" id="inputPassword"@bind-value="@adduser.Senha" placeholder="">
 </div>
+<div class="col-3">
+        Data de cadastro:<input type="datetime" class="form-control" id="dataCriacao" @bind-value="adduser.DataAtual" readonly/>
+    </div>
+<div class="col-3" style="margin-top:10px;">
+    <button type="submit" @onclick="CadastrarUsuario" @onclick:preventDefault class="btn btn-primary mb-6">Adicionar usuario</button>
+</div>
+<div class="row" style="margin=25px;">
+        <strong>Lista de usuários</strong>
+        @if (Users != null)
+        {
+            <table class="table table-bordered table-dark">
+                <thead class="">
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Data de Criação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var user in Users)
+                    {
+                        <tr>
+                            <td>@user.Usuario</td>
+                            <td>@user.DataCriacao</td>
+                            <td>
+                                <a class="btn btn-secondary" href="fetchdata/@user.Usuario">Alterar</a>
+                                <a class="btn btn-danger" href="fetchdata/@user.Usuario">Excluir</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>        
+              }
+    </div>
+<div class="row" style="margin:15px;margin-bottom:50px">
+        <div class="col"><button @onclick="GetUser" class="btn btn-info">Lista</button></div>
+    </div>
+
+@code {
+     
+   
+    Login adduser = new Login();
+    List<Login>? Users;
+
+    private string? postStatus;
+
+    private string? InputUsuario;
+    private string? InputSenha;
+
+
+      protected override async Task OnInitializedAsync()
+    {
+
+        var apiName = "http://geovanevr77-001-site1.ftempurl.com/api/login";
+        var httpResponse = await client.GetAsync(apiName);
+        if (httpResponse.IsSuccessStatusCode)
+        {
+            Users = new List<Login>();
+            var apiConteudo = await httpResponse.Content.ReadAsStringAsync();
+            Users = JsonConvert.DeserializeObject<List<Login>>(apiConteudo);
+            StateHasChanged();
+        }
+    }   
+    private async void GetUser(){
+        var apiName = "http://geovanevr77-001-site1.ftempurl.com/api/login"; // endpoint.
+        var httpResponse = await client.GetAsync(apiName);
+        if(httpResponse.IsSuccessStatusCode){ 
+            Users = new List<Login>();      
+            var apiConteudo = await httpResponse.Content.ReadAsStringAsync();
+            //famosa Desserialização
+            Users = JsonConvert.DeserializeObject<List<Login>>(apiConteudo);
+            StateHasChanged();
+        }
+
+
+    }
+
+    private async Task CadastrarUsuario()
+    {
+        adduser.DataCriacao = adduser.DataAtual.ToLocalTime();
+        var apiName = "http://geovanevr77-001-site1.ftempurl.com/api/login";
+         // endpoint.
+         var httpResponse = await client.PutAsJsonAsync<Login>("http://geovanevr77-001-site1.ftempurl.com/api/login",adduser);
+       if(httpResponse.IsSuccessStatusCode)
+       {
+        var postData = JsonConvert.SerializeObject(adduser);
+        var postresponse = await client.PostAsync(apiName, new StringContent(postData));
+        postStatus = "Cadastro realizado com sucesso!";
+        StateHasChanged();
+        
+       
+       }
+    }
+   
+}
