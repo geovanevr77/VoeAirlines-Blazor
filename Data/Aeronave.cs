@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace VoeAirlinesBlazorApi3.Data
+namespace VoeAirlinesBlazor.Data
 {
     public class Aeronave
     {
