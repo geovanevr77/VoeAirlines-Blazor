@@ -1,0 +1,66 @@
+@page "/Post"
+@using Newtonsoft.Json
+@using voeairlines_blazor.Data
+@inject HttpClient client
+@inject Services.AppData AppData;
+
+<div col-3>
+    <div class="mb-3">
+        <label for="usuario" class="form-label">Usuário</label>
+             
+        <input type="text" class="form-control" id="usuario" placeholder="" @bind="InputUsuario">
+    </div>
+    <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="text" class="form-control" id="senha" placeholder="" @bind="InputSenha">
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3" @onclick="PostLogin">Entrar</button>
+     
+      
+    </div>
+</div>
+
+@if(AppData.TabelaAtiva){
+     <TabelaLogin/>
+}
+
+@code {
+
+    public string? InputUsuario { get; set; }
+    public string? InputSenha { get; set; }
+    [Parameter]
+    public string? UrlAPI { get; set; }
+    Login  login;
+    public static string? msg { get; set; } = "Aguardando...";
+    private async Task PostLogin()
+    {
+
+        var apiName = "http://jonatasx-001-site1.ftempurl.com/api/login";
+        login = new Login(
+        InputUsuario,
+        InputSenha,
+        DateTime.Now
+        );
+
+        var json = JsonConvert.SerializeObject(login);
+        var httpContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+        var httpResponse = await client.PostAsync(apiName, httpContent);
+        if (httpResponse.IsSuccessStatusCode)
+        {            
+            StateHasChanged();   
+            AppData.TabelaAtiva = true;
+         
+        }
+        else
+        {
+            msg = "Preencha valores!";
+        }
+        InputUsuario = "";
+        InputSenha = "";
+     
+     }
+ 
+
+
+}
